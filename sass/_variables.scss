@@ -1,0 +1,40 @@
+// theme colors
+
+$white: #fff;
+$black: #0a083a;
+$blue: #315bff;
+$green: #02be83;
+$pink: #ff3c78;
+$orange: #fe7831;
+
+$grey-500: #888787;
+$grey-400: #a4a4a3;
+$grey-300: #c1c0c0;
+$grey-200: #ebebea;
+$grey-100: #f5f5f5;
+
+$linear-orange: linear-gradient(270deg, $orange 0%, #ffdebe 100%);
+$linear-green: linear-gradient(270deg, $green 0%, #b3f6dc 100%);
+$linear-pink: linear-gradient(270deg, $pink 2.8%, #ffb2b2 100%);
+$linear-blue: linear-gradient(97.49deg, $blue -0.43%, #315bff 144.53%);
+
+$bg-shadow: #c4c4c4;
+
+$box-shadow-primary: 0px 40px 80px rgba(138, 168, 248, 0.25);
+$box-shadow-secondary: 0px 25px 50px rgba(23, 44, 130, 0.4);
+$backdrop-filter: blur(27.9549px);
+
+// typhography
+
+$base-font: 1rem;
+
+$hero-title: $base-font * 4.5rem;
+$fs-h1: $base-font * 3.5rem;
+$fs-h2: $base-font * 3rem;
+$fs-h3: $base-font * 2.5rem;
+$fs-h4: $base-font * 2rem;
+$fs-h5: $base-font * 1.5rem;
+
+$fs-body-xxl: $base-font * 1.25rem;
+$fs-body-large: $base-font * 1.125rem;
+$fs-body-large: $base-font * 0.875rem;
