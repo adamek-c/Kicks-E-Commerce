@@ -1,0 +1,261 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 70.375em;
+  margin-inline: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 48em) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .container {
+    padding: 0;
+  }
+}
+
+.background {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 1.25rem;
+}
+
+@media (min-width: 48em) {
+  .header {
+    padding-top: 2.5rem;
+  }
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__list {
+  display: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.menu__list ::first-letter {
+  text-transform: uppercase;
+}
+
+.menu__list :not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+@media (min-width: 64em) {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.menu__list li a {
+  line-height: 1.78;
+}
+
+.menu__list__active {
+  color: #ff3c78;
+  position: relative;
+}
+
+.menu__list__active::after {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #ff3c78;
+  border-radius: 6.25rem;
+  bottom: -1.1rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.menu__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__icon__hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 0.75rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+@media (min-width: 64em) {
+  .menu__icon__hamburger {
+    display: none;
+  }
+}
+
+.menu__icon__hamburger > * {
+  width: 2rem;
+  height: 0.125rem;
+  background-color: #0a083a;
+}
+
+.menu__icon__hamburger :not(:first-child) {
+  margin-top: auto;
+}
+
+.menu__icon div:first-child {
+  margin-right: 1.1875rem;
+}
+
+@media (min-width: 31.25em) {
+  .menu__icon div:first-child {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .menu__icon div:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0;
+  }
+}
+
+.menu__icon__user {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  .menu__icon__user {
+    display: block;
+  }
+}
+
+.menu__icon__search {
+  margin-right: 1rem;
+}
+
+@media (min-width: 64em) {
+  .menu__icon__search {
+    margin: 0;
+  }
+}
+
+.menu__icon__search, .menu__icon__user, .menu__icon__shopping-bag {
+  cursor: pointer;
+}
+
+@media (min-width: 64em) {
+  .menu__icon__search, .menu__icon__user, .menu__icon__shopping-bag {
+    margin-right: 3rem;
+  }
+}
+
+.menu__icon__shopping-bag {
+  position: relative;
+}
+
+@media (min-width: 64em) {
+  .menu__icon__shopping-bag {
+    margin-right: 0;
+  }
+}
+
+.menu__icon__shopping-bag__count {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #fff;
+  background-color: #ff3c78;
+  bottom: -15%;
+  right: -9%;
+  border-radius: 6.25rem;
+  font-size: 0.46875rem;
+  line-height: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .menu__icon__shopping-bag__count {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.625rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

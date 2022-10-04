@@ -1,0 +1,143 @@
+.header {
+	padding-top: $base-padding * 2.5;
+
+	@include mq(medium) {
+		padding-top: $base-padding * 5;
+	}
+}
+
+.menu {
+	@include flex;
+	justify-content: space-between;
+
+	&__list {
+		display: none;
+		font-size: $fs-body-large;
+		font-weight: $fw-medium;
+
+		::first-letter {
+			text-transform: uppercase;
+		}
+
+		:not(:last-child) {
+			margin-right: 3.5rem;
+		}
+
+		@include mq(large) {
+			display: flex;
+		}
+
+		li a {
+			line-height: 1.78;
+		}
+
+		&__active {
+			color: $pink;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				height: 0.5rem;
+				width: 0.5rem;
+				background-color: $pink;
+				border-radius: $border-radius-full;
+				bottom: -1.1rem;
+				transform: translate(-50%, -50%);
+				left: 50%;
+			}
+		}
+	}
+
+	&__icon {
+		@include flex;
+
+		&__hamburger {
+			@include flex;
+			height: 0.75rem;
+			flex-direction: column;
+			cursor: pointer;
+
+			@include mq(large) {
+				display: none;
+			}
+
+			> * {
+				width: 2rem;
+				height: 0.125rem;
+				background-color: $black;
+			}
+
+			:not(:first-child) {
+				margin-top: auto;
+			}
+		}
+
+		div:first-child {
+			margin-right: ($base-margin * 1.1875) * 2;
+			@include mq(small) {
+				display: none;
+			}
+
+			@include mq(large) {
+				@include flex;
+				margin-right: 0;
+			}
+		}
+
+		&__user {
+			display: none;
+
+			@include mq(large) {
+				display: block;
+			}
+		}
+
+		&__search {
+			margin-right: $base-margin * 2;
+
+			@include mq(large) {
+				margin: 0;
+			}
+		}
+
+		&__search,
+		&__user,
+		&__shopping-bag {
+			cursor: pointer;
+
+			@include mq(large) {
+				margin-right: $base-margin * 6;
+			}
+		}
+
+		&__shopping-bag {
+			position: relative;
+
+			@include mq(large) {
+				margin-right: 0;
+			}
+
+			&__count {
+				position: absolute;
+				width: 0.75rem;
+				height: 0.75rem;
+				color: $white;
+				background-color: $pink;
+				bottom: -15%;
+				right: -9%;
+				border-radius: $border-radius-full;
+				font-size: 0.46875rem;
+				line-height: 0.75rem;
+				text-align: center;
+
+				@include mq(large) {
+					width: 1rem;
+					height: 1rem;
+					line-height: 1rem;
+					font-size: 0.625rem;
+				}
+			}
+		}
+	}
+}
