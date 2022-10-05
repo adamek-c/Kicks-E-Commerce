@@ -6,6 +6,8 @@ $green: #02be83;
 $pink: #ff3c78;
 $orange: #fe7831;
 
+$clr-text-grey: #6c6b6b;
+
 $grey-500: #888787;
 $grey-400: #a4a4a3;
 $grey-300: #c1c0c0;
@@ -26,16 +28,16 @@ $backdrop-filter: blur(27.9549px);
 // typhography (16px)
 $base-font: 1rem;
 
-$hero-title: $base-font * 4.5;
-$fs-h1: $base-font * 3.5;
-$fs-h2: $base-font * 3;
-$fs-h3: $base-font * 2.5;
-$fs-h4: $base-font * 2;
-$fs-h5: $base-font * 1.5;
+$hero-title: $base-font * 4.5; // 72px
+$fs-h1: $base-font * 3.5; // 56px
+$fs-h2: $base-font * 3; // 48px
+$fs-h3: $base-font * 2.5; // 40px
+$fs-h4: $base-font * 2; // 32px
+$fs-h5: $base-font * 1.5; // 24px
 
-$fs-body-xxl: $base-font * 1.25;
-$fs-body-large: $base-font * 1.125;
-$fs-body-small: $base-font * 0.875;
+$fs-body-xxl: $base-font * 1.25; // 20px
+$fs-body-large: $base-font * 1.125; // 18px
+$fs-body-small: $base-font * 0.875; // 14px
 
 // light-height
 $base-light-height: 1.6;
@@ -45,9 +47,12 @@ $base-light-height-small: 1.5;
 $base-padding: 0.5rem;
 $base-margin: 0.5rem;
 
+$padding-btn-tb: $base-padding + 0.25; // 12px
+$padding-btn-rl: $base-padding * 6.25; //50px
+
 // border radius
 $border-radius: 0.25rem; // 4px
-$border-radius-full: 6.25rem;
+$border-radius-full: 6.25rem; // 100px
 
 //  font weight
 $fw-bold: 700;

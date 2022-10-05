@@ -1,0 +1,114 @@
+.hero {
+	margin-top: 2.5rem;
+	text-align: center;
+
+	&__left {
+		&__title {
+			@include title($fs-h4, $fw-bold, $black);
+			letter-spacing: -0.04em;
+		}
+
+		&__text {
+			@include text(
+				$base-font,
+				$fw-medium,
+				$clr-text-grey,
+				$base-light-height-small
+			);
+			margin-top: $base-margin * 4;
+		}
+	}
+
+	&__action {
+		@include flex;
+		margin-top: $base-margin * 4;
+		max-width: 11.125rem;
+		margin-inline: auto;
+
+		:not(:last-child) {
+			margin-right: $base-margin * 4;
+		}
+
+		&__btn {
+			@include btn($white, $base-font, $fw-medium, $pink, $prl: 1.25rem);
+			@include shadow($pink);
+			line-height: $base-light-height-small;
+		}
+
+		&__icon {
+			writing-mode: vertical-rl;
+		}
+	}
+
+	&__offers {
+		@include flex;
+		flex-direction: column;
+		margin-top: $base-margin * 4;
+		margin-inline: auto;
+		max-width: 11.125rem;
+		align-items: flex-start;
+
+		&__list {
+			@include flex;
+
+			span {
+				width: 1.5rem;
+				height: 1.5rem;
+				border-radius: $border-radius-full;
+				background-color: $green;
+				position: relative;
+				margin-right: $base-margin + 0.75;
+
+				img {
+					position: absolute;
+					transform: translate(-50%, -50%);
+					top: 50%;
+					left: 50%;
+				}
+			}
+
+			p {
+				font-size: $fs-body-small;
+				color: $clr-text-grey;
+				font-weight: $fw-medium;
+			}
+
+			&--space {
+				margin-bottom: $base-margin * 2;
+			}
+		}
+	}
+
+	&__right {
+		margin-top: 3.125rem;
+
+		&__pictures {
+			display: flex;
+			align-items: center;
+			position: relative;
+			min-height: 372px;
+			overflow: hidden;
+
+			&__bg,
+			&__shoes {
+				width: 100%;
+				height: auto;
+			}
+
+			&__bg {
+				transform: scale(1.25);
+				position: absolute;
+				top: 15%;
+				left: -10%;
+			}
+
+			&__shoes {
+				top: -1%;
+				right: 2%;
+				position: absolute;
+				z-index: 10;
+				transform: scale(1.44);
+			}
+		}
+	}
+}

@@ -2,6 +2,52 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 	@content;
 }
+
+@mixin title($size, $weight, $color) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	@content;
+}
+
+@mixin text($size, $weight, $color, $line-h) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+	line-height: $line-h;
+	@content;
+}
+
+@mixin btn(
+	$color,
+	$size,
+	$weight,
+	$bg,
+	$ptb: $padding-btn-tb,
+	$prl: $padding-btn-rl
+) {
+	padding-inline: $prl;
+	padding-block: $ptb;
+	color: $color;
+	font-size: $size;
+	font-weight: $weight;
+	background-color: $bg;
+	text-transform: capitalize;
+	border-radius: $border-radius;
+	@content;
+}
+
+@mixin shadow($color) {
+	box-shadow: 0px 12px 38px -4px rgba(255, 60, 120, 0.4);
+}
+
+// @mixin position($position, $top, $right, $left, $bottom) {
+// 	position: $position;
+// 	top: $top;
+// 	right: $right;
+// 	bottom: $bottom;
+// 	left: $left;
+// 	@content;
+// }
