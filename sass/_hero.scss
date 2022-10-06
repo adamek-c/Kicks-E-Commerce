@@ -1,5 +1,6 @@
 .hero {
 	margin-top: 2.5rem;
+	padding-bottom: 2.625rem;
 	text-align: center;
 
 	&__left {
@@ -81,6 +82,7 @@
 
 	&__right {
 		margin-top: 3.125rem;
+		position: relative;
 
 		&__pictures {
 			display: flex;
@@ -103,6 +105,38 @@
 				position: absolute;
 				z-index: 10;
 				transform: scale(1.12);
+			}
+		}
+
+		&__arrows {
+			@include flex;
+			width: 100%;
+			margin-inline: auto;
+
+			:not(:last-child) {
+				margin-right: $base-margin + 0.25rem;
+			}
+
+			&__left,
+			&__right {
+				@include flex;
+				width: 2.125rem;
+				height: 2.125rem;
+				border-radius: $border-radius-full;
+				cursor: position;
+
+				> img {
+					width: 14px;
+					height: 14px;
+				}
+			}
+
+			&__left {
+				border: 0.125rem solid $grey-300;
+			}
+
+			&__right {
+				border: 0.125rem solid $blue;
 			}
 		}
 	}

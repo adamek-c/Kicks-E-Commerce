@@ -17,7 +17,7 @@ $grey-100: #f5f5f5;
 $linear-orange: linear-gradient(270deg, $orange 0%, #ffdebe 100%);
 $linear-green: linear-gradient(270deg, $green 0%, #b3f6dc 100%);
 $linear-pink: linear-gradient(270deg, $pink 2.8%, #ffb2b2 100%);
-$linear-blue: linear-gradient(97.49deg, $blue -0.43%, #315bff 144.53%);
+$linear-blue: linear-gradient(97.49deg, #8aa8f8 -0.43%, $blue 144.53%);
 
 $bg-shadow: #c4c4c4;
 
@@ -56,6 +56,7 @@ $border-radius-full: 6.25rem; // 100px
 
 //  font weight
 $fw-bold: 700;
+$fw-semibold: 600;
 $fw-medium: 500;
 
 //  font familly
