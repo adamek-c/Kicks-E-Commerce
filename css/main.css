@@ -387,33 +387,26 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
-  min-height: 372px;
   overflow: hidden;
 }
 
 .hero__right__pictures__bg, .hero__right__pictures__shoes {
   width: 100%;
-  height: auto;
+  min-height: auto;
 }
 
 .hero__right__pictures__bg {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  position: absolute;
-  top: 15%;
-  left: -10%;
+  -webkit-transform: translate(-10%);
+          transform: translate(-10%);
 }
 
 .hero__right__pictures__shoes {
-  top: -1%;
+  top: -19%;
   right: 2%;
   position: absolute;
   z-index: 10;
-  -webkit-transform: scale(1.44);
-          transform: scale(1.44);
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
 }
 /*# sourceMappingURL=main.css.map */
